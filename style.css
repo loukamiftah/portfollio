@@ -1,4 +1,4 @@
-/* Mise en forme globale */
+/* ===== Séance 4 : mise en forme globale ===== */
 body {
   font-family: Arial, sans-serif;
   color: #333;
@@ -16,40 +16,10 @@ p {
   line-height: 1.5;
 }
 
-/* En-tête et navigation */
+/* ===== Séance 4 + 5 : en-tête et menu (Flexbox) ===== */
 #main-header {
   background-color: #f4f4f4;
   padding: 10px;
-}
-
-nav a {
-  margin-right: 15px;
-  color: #333;
-}
-
-/* Blocs du CV et des projets */
-.card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
-  background-color: #f4f4f4;
-}
-
-/* Formulaire de contact */
-input, textarea, button {
-  font-family: Arial, sans-serif;
-  padding: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Séance 5 - En-tête et menu avec Flexbox */
-#main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,15 +35,31 @@ header nav ul {
   margin: 0;
 }
 
-/* Séance 5 - Photo de profil à côté de la présentation (CV) */
-.profil {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
+nav a {
+  color: #333;
 }
 
-/* Séance 5 - Galerie de projets avec CSS Grid */
+/* ===== Séance 4 : blocs du CV et des projets ===== */
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f4f4f4;
+}
+
+/* ===== Séance 5 : blocs du CV côte à côte (Flexbox) ===== */
+.cv-blocs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cv-blocs .card {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ===== Séance 5 : galerie de projets (CSS Grid) ===== */
 .grid-projets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -81,7 +67,19 @@ header nav ul {
   margin-top: 2rem;
 }
 
-.grid-projets img {
-  width: 100%;
-  height: auto;
+/* ===== Séance 4 : formulaire de contact ===== */
+label {
+  display: block;
+}
+
+input, textarea, button {
+  font-family: Arial, sans-serif;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
 }
