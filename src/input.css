@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-marque: #e11d48;
+  --font-titre: "Poppins", sans-serif;
+}
+
+@utility ombre-nette {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* 1. Style par défaut des balises HTML */
+@layer base {
+  h2 {
+    @apply text-xl font-bold text-red-600;
+  }
+}
+
+/* 2. Classes de composants réutilisables */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded bg-blue-600 text-white font-semibold;
+  }
+}
